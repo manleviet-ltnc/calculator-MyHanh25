@@ -1,0 +1,8 @@
+C:\Users\USER\Documents\GitHub\calculator-MyHanh25\maytinh\maytinh\obj\x86\Debug\maytinh.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\calculator-MyHanh25\maytinh\maytinh\obj\x86\Debug\maytinh.csproj.GenerateResource.Cache
+C:\Users\USER\Documents\GitHub\calculator-MyHanh25\maytinh\maytinh\bin\Debug\maytinh.exe
+C:\Users\USER\Documents\GitHub\calculator-MyHanh25\maytinh\maytinh\bin\Debug\maytinh.pdb
+C:\Users\USER\Documents\GitHub\calculator-MyHanh25\maytinh\maytinh\obj\x86\Debug\maytinh.exe
+C:\Users\USER\Documents\GitHub\calculator-MyHanh25\maytinh\maytinh\obj\x86\Debug\maytinh.pdb
+C:\Users\USER\Documents\GitHub\calculator-MyHanh25\maytinh\maytinh\obj\x86\Debug\maytinh.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\calculator-MyHanh25\maytinh\maytinh\obj\x86\Debug\maytinh.frmMain.resources
