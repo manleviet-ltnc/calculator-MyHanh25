@@ -26,13 +26,8 @@ namespace maytinh
 
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
         bool isTypingNumber = false;
-        enum PhepToan { Cong, Tru, Nhan, Chia };
+        enum PhepToan { none,Cong, Tru, Nhan, Chia };
         PhepToan pheptoan;
         double nho;
         private void NhapSo(object sender, EventArgs e)
@@ -54,6 +49,8 @@ namespace maytinh
         
         private void NhapPhepToan(object sender, EventArgs e)
         {
+            if(nho!=0)
+
             TinhKetQua();
             Button btn= (Button)sender;
             switch(btn.Text)
@@ -85,6 +82,8 @@ namespace maytinh
         {
             TinhKetQua();
             isTypingNumber = false;
+            nho = 0;
+            pheptoan = PhepToan.none;
         }
 
         private void frmMain_KeyPress(object sender, KeyPressEventArgs e)
@@ -103,7 +102,51 @@ namespace maytinh
                 case '9':
                     NhapSo("" + e.KeyChar);
                     break;
-            }
+                case '+':
+                    btnCong.PerformClick();
+                    break;
+                case '-':
+                    btnTru.PerformClick();
+                    break;
+                case '*':
+                    btnNhan.PerformClick();
+                    break;
+                case '/':
+                    btnChia.PerformClick();
+                    break;
+                case '=':
+                    btnBang.PerformClick();
+                    break;
+                default:
+                    break;
+               }
+
         }
-    }
+        private void btnCan_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = (Math.Sqrt(Double.Parse(lblDisplay.Text))).ToString();
+        }
+
+        private void btnDoiGiau_click(object sender,EventArgs e)
+        {
+            lblDisplay.Text = (-1 * (double.Parse(lblDisplay.Text))).ToString();
+        }
+
+        private void btnphantram_click(object sender,EventArgs e)
+        {
+            lblDisplay.Text = ((double.Parse(lblDisplay.Text) / 100)).ToString();
+        }
+
+        private void btnXoaMotKiTu_click(object sender,EventArgs e)
+        {
+            if (lblDisplay.Text != "")
+                lblDisplay.Text = (lblDisplay.Text).Substring(0, lblDisplay.Text.Length - 1);
+        }
+
+        private void btnXoaHet_click(object sender, EventArgs e)
+        {
+            nho = 0;
+            lblDisplay.Text = "0.";
+        }
+         }
 }
