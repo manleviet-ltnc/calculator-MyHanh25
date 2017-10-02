@@ -148,5 +148,35 @@ namespace maytinh
             nho = 0;
             lblDisplay.Text = "0.";
         }
+
+        private void Nhapso(string so)
+        {
+            if (isTypingNumber)
+            {
+                if (lblDisplay.Text == "0")
+                    lblDisplay.Text = "";
+                lblDisplay.Text += so;
+            }
+            else
+            {
+                lblDisplay.Text = so;
+                isTypingNumber = true;
+            }
+        }
+
+        private void btnThapPhan_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text.Contains("."))
+            {
+                if (lblDisplay.Text == "0.")
+                {
+                    lblDisplay.Text = "";
+                    NhapSo("0.");
+                }
+                return;
+            }
+            lblDisplay.Text = lblDisplay.Text + ".";
+        }
+           
          }
 }
